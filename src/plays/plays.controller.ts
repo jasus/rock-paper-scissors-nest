@@ -17,4 +17,9 @@ export class PlaysController {
     findAll(): Observable<Play[]> {
         return this.playsService.findAll();
     }
+
+    @Get('/hand')
+    getHand(): number {
+        return Math.floor(Math.random() * 6 / 2);
+    }
 }

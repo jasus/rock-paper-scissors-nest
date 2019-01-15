@@ -15,6 +15,6 @@ export class PlaysService {
     }
 
     findAll(): Observable<Play[]> {
-        return this.playModel.find().exec();
+        return this.playModel.find().sort('-date').exec();
     }
 }
